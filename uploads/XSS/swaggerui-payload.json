@@ -1,0 +1,9 @@
+{
+    "url": "https://cheemahq.vercel.app/uploads/XSS/swaggerui-payload.yaml",
+    "urls": [
+        {
+            "url": "https://cheemahq.vercel.app/uploads/XSS/swaggerui-payload.yaml",
+            "name": "Foo"
+        }
+    ]
+}

